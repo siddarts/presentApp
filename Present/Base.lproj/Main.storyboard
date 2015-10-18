@@ -357,14 +357,20 @@
                             <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tkp-IQ-1gT">
-                                    <rect key="frame" x="17" y="15" width="45" height="21"/>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tkp-IQ-1gT">
+                                    <rect key="frame" x="8" y="15" width="584" height="21"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                             </subviews>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstItem="Tkp-IQ-1gT" firstAttribute="leading" secondItem="4CM-Rm-oNK" secondAttribute="leading" constant="8" id="5cQ-f3-A69"/>
+                                <constraint firstAttribute="trailing" secondItem="Tkp-IQ-1gT" secondAttribute="trailing" constant="8" id="LTt-C0-3Km"/>
+                                <constraint firstAttribute="bottom" secondItem="Tkp-IQ-1gT" secondAttribute="bottom" constant="8" id="LjZ-9F-peN"/>
+                                <constraint firstItem="Tkp-IQ-1gT" firstAttribute="top" secondItem="4CM-Rm-oNK" secondAttribute="top" constant="15" id="Rw8-Kq-amf"/>
+                            </constraints>
                         </view>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Settings" id="cKT-su-WXO">
@@ -400,7 +406,7 @@
             </objects>
             <point key="canvasLocation" x="874" y="1045"/>
         </scene>
-        <!--Settings Controller-->
+        <!--Settings-->
         <scene sceneID="7tw-y8-c6e">
             <objects>
                 <viewController storyboardIdentifier="Settings" id="1cx-Sn-4NQ" customClass="SettingsController" customModule="Present" customModuleProvider="target" sceneMemberID="viewController">
@@ -411,12 +417,48 @@
                     <view key="view" contentMode="scaleToFill" id="50a-jc-Cgu">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QuH-Cw-EAv">
+                                <rect key="frame" x="26" y="83" width="34" height="30"/>
+                                <state key="normal" title="Back"/>
+                                <connections>
+                                    <action selector="backButton:" destination="1cx-Sn-4NQ" eventType="touchUpInside" id="Koq-mD-o1b"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="QuH-Cw-EAv" firstAttribute="top" secondItem="Zle-YJ-aP6" secondAttribute="bottom" constant="19" id="PqH-aS-sFL"/>
+                            <constraint firstItem="QuH-Cw-EAv" firstAttribute="leading" secondItem="50a-jc-Cgu" secondAttribute="leadingMargin" constant="6" id="SMT-dQ-8pF"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Settings" id="oBs-Ef-KZN">
+                        <barButtonItem key="leftBarButtonItem" title="Back" id="GDF-7I-aPB">
+                            <connections>
+                                <action selector="back:" destination="1cx-Sn-4NQ" id="xhn-Nc-dmZ"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NKW-cQ-WpY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1650" y="973"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="BgK-fN-ghZ">
+            <objects>
+                <navigationController id="gfC-lT-Xlu" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="qTf-po-Cvh">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="1cx-Sn-4NQ" kind="relationship" relationship="rootViewController" id="RC3-VO-rQf"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2wX-pv-YZi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2364" y="989"/>
         </scene>
         <!--New Course-->
         <scene sceneID="8Aq-7I-9aX">
@@ -641,8 +683,11 @@
                             <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aOe-DE-gdw">
-                                    <rect key="frame" x="17" y="15" width="45" height="21"/>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aOe-DE-gdw">
+                                    <rect key="frame" x="17" y="15" width="362" height="21"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="362" id="yPS-H9-RZT"/>
+                                    </constraints>
                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     <nil key="highlightedColor"/>
@@ -685,4 +730,7 @@
     <resources>
         <image name="logo" width="1659" height="1536"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="RC3-VO-rQf"/>
+    </inferredMetricsTieBreakers>
 </document>

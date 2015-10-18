@@ -27,8 +27,6 @@ class SignUpViewController: UIViewController, UITextFieldDelegate, UIPickerViewD
         super.viewDidLoad()
         rolePicker.delegate = self
         rolePicker.dataSource = self
-        
-
     }
 
     override func didReceiveMemoryWarning() {

@@ -18,11 +18,9 @@ class ViewController: UIViewController, CBPeripheralManagerDelegate, UITextField
     var beaconPeripheralData: NSDictionary!
     var peripheralManager: CBPeripheralManager!
 
-    
     @IBOutlet weak var UsernameTextField: UITextField!
     @IBOutlet weak var EmailTextField: UITextField!
     @IBOutlet weak var PasswordTextField: UITextField!
-    
     @IBOutlet weak var RolePicker: UIPickerView!
    
     override func viewDidLoad() {
@@ -66,8 +64,6 @@ class ViewController: UIViewController, CBPeripheralManagerDelegate, UITextField
         })
     }
     
-    
-   
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -189,25 +185,6 @@ class ViewController: UIViewController, CBPeripheralManagerDelegate, UITextField
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 ////
 ////  ViewController.swift
 ////  Present
@@ -300,6 +277,3 @@ class ViewController: UIViewController, CBPeripheralManagerDelegate, UITextField
 //    
 //    
 //}
-
-
-

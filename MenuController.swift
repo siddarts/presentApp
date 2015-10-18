@@ -13,13 +13,21 @@ class MenuController: UITableViewController {
 
     @IBOutlet weak var name: UILabel!
     var TableArray = [String]()
+    let currentUser = PFUser.currentUser()!
+    
+    func updateName(){
+        let userFName = currentUser["firstName"] as! String
+        let userLName = currentUser["lastName"] as! String
+        name.text = String(userFName + " " + userLName)
+    }
+    
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return TableArray.count
     }
-
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        updateName()
         TableArray = ["Settings","Logout"]
         self.tableView.tableFooterView = UIView(frame: CGRectZero)
         
@@ -33,7 +41,6 @@ class MenuController: UITableViewController {
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
 
     // MARK: - Table view data source

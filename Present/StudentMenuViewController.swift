@@ -11,7 +11,6 @@ import Parse
 
 class StudentMenuViewController: UITableViewController {
     
-
     @IBOutlet weak var name: UILabel!
     var TableArray = [String]()
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -34,7 +33,6 @@ class StudentMenuViewController: UITableViewController {
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     // MARK: - Table view data source
