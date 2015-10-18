@@ -12,24 +12,21 @@ import LocalAuthentication
 import CoreBluetooth
 import CoreLocation
 
-class ViewController: UIViewController, CBPeripheralManagerDelegate, UITextFieldDelegate, UIPickerViewDataSource, UIPickerViewDelegate {
+class ViewController: UIViewController, CBPeripheralManagerDelegate, UITextFieldDelegate {
     
     var localBeacon: CLBeaconRegion!
     var beaconPeripheralData: NSDictionary!
     var peripheralManager: CBPeripheralManager!
-    var roles = ["Professor", "Student"]
+
     
     @IBOutlet weak var UsernameTextField: UITextField!
     @IBOutlet weak var EmailTextField: UITextField!
     @IBOutlet weak var PasswordTextField: UITextField!
-    @IBOutlet var signUpButton: UIButton!
     
     @IBOutlet weak var RolePicker: UIPickerView!
    
     override func viewDidLoad() {
         super.viewDidLoad()
-        RolePicker.delegate = self
-        RolePicker.dataSource = self
     }
     
     @IBAction func loginAction(sender: AnyObject) {
@@ -69,59 +66,21 @@ class ViewController: UIViewController, CBPeripheralManagerDelegate, UITextField
         })
     }
     
-    @IBAction func signupAction(sender: AnyObject) {
-        signUp()
-    }
     
-    func signUp() {
-        let user = PFUser()
-        user.username = UsernameTextField.text
-        user.password = PasswordTextField.text
-        user.email = EmailTextField.text
-        user.setValue(roles[RolePicker.selectedRowInComponent(0)], forKey: "role")
-        
-        user.signUpInBackgroundWithBlock {
-            (succeeded: Bool, error: NSError?) -> Void in
-            if let error = error {
-                print("in error")
-//                let errorString = error.userInfo["error"] as? NSString
-                _ = error.userInfo["error"] as? NSString
-//                let alert = UIAlertController(title:"Missing Field", message:"Cannot create user..please fill required fields!", preferredStyle: UIAlertControllerStyle.Alert)
-//                alert.addAction(UIAlertAction(title:"Okay", style: UIAlertActionStyle.Default, handler:nil))
-//                self.presentViewController(alert, animated:true, completion:nil)
-                // Show the errorString somewhere and let the user try again.
-            } else {
-                // Hooray! Let them use the app now.
-            }
-        }
-    }
-
+   
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
-    func textField(EmailTextField: UITextField, shouldChangeCharactersInRange range: NSRange, replacementString string: String) -> Bool {
-        let oldText: NSString = EmailTextField.text!
-        let newText: NSString = oldText.stringByReplacingCharactersInRange(range, withString: string)
-        signUpButton.enabled = (newText.length > 0)
-        return true
-    }
+//    func textField(EmailTextField: UITextField, shouldChangeCharactersInRange range: NSRange, replacementString string: String) -> Bool {
+//        let oldText: NSString = EmailTextField.text!
+//        let newText: NSString = oldText.stringByReplacingCharactersInRange(range, withString: string)
+//        signUpButton.enabled = (newText.length > 0)
+//        return true
+//    }
     
     
-    //Code for Picker
-    func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
-        return 1
-    }
-    
-    func pickerView(pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return roles.count
-    }
-    
-    func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return roles[row]
-    }
-
     
 //    //TouchID Authentication Below
 //    func authenticateUser() {
