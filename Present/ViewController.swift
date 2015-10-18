@@ -22,7 +22,7 @@ class ViewController: UIViewController, CBPeripheralManagerDelegate, UITextField
     @IBOutlet weak var UsernameTextField: UITextField!
     @IBOutlet weak var EmailTextField: UITextField!
     @IBOutlet weak var PasswordTextField: UITextField!
-    @IBOutlet var signUpButton: UIButton!
+    @IBOutlet weak var signUpButton: UIBarButtonItem!
     
     @IBOutlet weak var RolePicker: UIPickerView!
    
@@ -37,6 +37,7 @@ class ViewController: UIViewController, CBPeripheralManagerDelegate, UITextField
     }
     
     func login() {
+        print("in login function")
         let user = PFUser()
         user.username = UsernameTextField.text
         user.password = PasswordTextField.text
@@ -69,11 +70,13 @@ class ViewController: UIViewController, CBPeripheralManagerDelegate, UITextField
         })
     }
     
-    @IBAction func signupAction(sender: AnyObject) {
+    @IBAction func signUpAction(sender: AnyObject) {
         signUp()
     }
+
     
     func signUp() {
+        print("in sign up")
         let user = PFUser()
         user.username = UsernameTextField.text
         user.password = PasswordTextField.text
@@ -83,9 +86,8 @@ class ViewController: UIViewController, CBPeripheralManagerDelegate, UITextField
         user.signUpInBackgroundWithBlock {
             (succeeded: Bool, error: NSError?) -> Void in
             if let error = error {
-                print("in error")
-//                let errorString = error.userInfo["error"] as? NSString
-                _ = error.userInfo["error"] as? NSString
+                let errorString = error.userInfo["error"] as? NSString
+//                _ = error.userInfo["error"] as? NSString
 //                let alert = UIAlertController(title:"Missing Field", message:"Cannot create user..please fill required fields!", preferredStyle: UIAlertControllerStyle.Alert)
 //                alert.addAction(UIAlertAction(title:"Okay", style: UIAlertActionStyle.Default, handler:nil))
 //                self.presentViewController(alert, animated:true, completion:nil)
