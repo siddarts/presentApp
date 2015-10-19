@@ -12,14 +12,21 @@ import Parse
 class MenuController: UITableViewController {
 
     @IBOutlet weak var name: UILabel!
+    let currentUser = PFUser.currentUser()!
+    
     var TableArray = [String]()
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return TableArray.count
     }
 
-
+    func updateName(){
+        let userFName = currentUser["firstName"] as! String
+        let userLName = currentUser["lastName"] as! String
+        name.text = String(userFName + " " + userLName)
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
+        updateName()
         TableArray = ["Settings","Logout"]
         self.tableView.tableFooterView = UIView(frame: CGRectZero)
         
