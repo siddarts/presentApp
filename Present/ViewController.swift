@@ -57,7 +57,7 @@ class ViewController: UIViewController, CBPeripheralManagerDelegate, UITextField
                         }
                         else {
                             print("Student")
-                            let studentHome : UIViewController = storyboard.instantiateViewControllerWithIdentifier("StudentNav")
+                            let studentHome : UIViewController = storyboard.instantiateViewControllerWithIdentifier("StudentHome")
                             self.presentViewController(studentHome, animated: true, completion: nil)
                         }
                         
@@ -86,6 +86,7 @@ class ViewController: UIViewController, CBPeripheralManagerDelegate, UITextField
         user.signUpInBackgroundWithBlock {
             (succeeded: Bool, error: NSError?) -> Void in
             if let error = error {
+                print("there is an error")
                 let errorString = error.userInfo["error"] as? NSString
 //                _ = error.userInfo["error"] as? NSString
 //                let alert = UIAlertController(title:"Missing Field", message:"Cannot create user..please fill required fields!", preferredStyle: UIAlertControllerStyle.Alert)
