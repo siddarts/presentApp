@@ -414,9 +414,12 @@
                             <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tkp-IQ-1gT">
-                                    <rect key="frame" x="17" y="15" width="45" height="21"/>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tkp-IQ-1gT">
+                                    <rect key="frame" x="17" y="15" width="522" height="21"/>
                                     <animations/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="522" id="MnM-Dm-3Br"/>
+                                    </constraints>
                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     <nil key="highlightedColor"/>
@@ -424,6 +427,9 @@
                             </subviews>
                             <animations/>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstItem="Tkp-IQ-1gT" firstAttribute="leading" secondItem="4CM-Rm-oNK" secondAttribute="leading" constant="17" id="QNu-4h-tn7"/>
+                            </constraints>
                         </view>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Settings" id="cKT-su-WXO">
@@ -739,13 +745,13 @@
                                     <constraint firstAttribute="height" constant="61" id="uvH-Gw-usq"/>
                                 </constraints>
                             </pickerView>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="First Name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IxE-JN-auT">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="First Name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IxE-JN-auT">
                                 <rect key="frame" x="20" y="92" width="280" height="30"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Last Name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nLS-D5-Ael">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Last Name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nLS-D5-Ael">
                                 <rect key="frame" x="315" y="92" width="265" height="30"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -783,6 +789,7 @@
                             <constraint firstAttribute="trailingMargin" secondItem="nLS-D5-Ael" secondAttribute="trailing" id="jM1-6s-Dsa"/>
                             <constraint firstItem="lQv-7s-ETX" firstAttribute="height" secondItem="IxE-JN-auT" secondAttribute="height" id="lqc-sT-vRn"/>
                             <constraint firstItem="lQv-7s-ETX" firstAttribute="centerX" secondItem="HQ2-Qb-l4Z" secondAttribute="centerX" id="oVc-3l-8xb"/>
+                            <constraint firstItem="nLS-D5-Ael" firstAttribute="width" secondItem="IxE-JN-auT" secondAttribute="width" id="qua-vB-dh9"/>
                             <constraint firstItem="M1l-lV-RVK" firstAttribute="centerX" secondItem="HQ2-Qb-l4Z" secondAttribute="centerX" id="wPB-Zs-h18"/>
                             <constraint firstItem="cPD-1Q-dNs" firstAttribute="width" secondItem="Vfc-bq-hyK" secondAttribute="width" id="wr3-yr-Msr"/>
                             <constraint firstAttribute="trailingMargin" secondItem="M1l-lV-RVK" secondAttribute="trailing" id="xbV-5q-v7o"/>
