@@ -21,32 +21,32 @@
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="First Name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Juv-NE-iun">
                                 <rect key="frame" x="20" y="78" width="258" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Last Name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BBn-id-wkG">
                                 <rect key="frame" x="292" y="78" width="288" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bAA-fM-XCd">
                                 <rect key="frame" x="20" y="121" width="560" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="s64-Km-P2c">
                                 <rect key="frame" x="20" y="160" width="560" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FIE-F1-ppN">
                                 <rect key="frame" x="20" y="198" width="560" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Phone Number" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xfE-m5-dAV">
                                 <rect key="frame" x="20" y="236" width="560" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JAV-1p-kQh">
@@ -118,25 +118,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="F0G-Ze-p1C">
-                                <rect key="frame" x="175" y="303" width="250" height="23"/>
-                                <animations/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="23" id="Bw9-Ab-SD8"/>
-                                    <constraint firstAttribute="width" constant="250" id="mwb-xV-0hs"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
-                            </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DRg-xU-Gut">
-                                <rect key="frame" x="175" y="242" width="250" height="23"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DRg-xU-Gut">
+                                <rect key="frame" x="20" y="240" width="560" height="30"/>
                                 <animations/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="22" id="9io-dE-Jff"/>
-                                    <constraint firstAttribute="width" constant="250" id="Rq3-75-ZJf"/>
-                                    <constraint firstAttribute="height" constant="23" id="Txc-fb-BiU"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <variation key="default">
                                     <mask key="constraints">
@@ -152,19 +140,31 @@
                                     <constraint firstAttribute="width" constant="148" id="9Pl-79-pab"/>
                                 </constraints>
                             </imageView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="F0G-Ze-p1C">
+                                <rect key="frame" x="20" y="289" width="560" height="30"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                            </textField>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="F0G-Ze-p1C" firstAttribute="top" secondItem="DRg-xU-Gut" secondAttribute="bottom" constant="38" id="7en-Nb-nKd"/>
-                            <constraint firstItem="DRg-xU-Gut" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="C2m-wy-AhC"/>
+                            <constraint firstItem="DRg-xU-Gut" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="5eA-Ix-vwM"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="DRg-xU-Gut" secondAttribute="trailing" id="8aW-eM-Dng"/>
                             <constraint firstItem="mZj-le-bob" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="17" id="Hhp-1B-wyC"/>
+                            <constraint firstItem="F0G-Ze-p1C" firstAttribute="top" secondItem="DRg-xU-Gut" secondAttribute="bottom" constant="19" id="NzS-TN-0KA"/>
+                            <constraint firstItem="DRg-xU-Gut" firstAttribute="top" secondItem="mZj-le-bob" secondAttribute="bottom" constant="28" id="O1s-Gn-Dhq"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="F0G-Ze-p1C" secondAttribute="trailing" id="TNB-jg-bcR"/>
                             <constraint firstItem="mZj-le-bob" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="UbL-sq-WSn"/>
+                            <constraint firstItem="F0G-Ze-p1C" firstAttribute="height" secondItem="DRg-xU-Gut" secondAttribute="height" id="WWC-5W-F4y"/>
+                            <constraint firstItem="F0G-Ze-p1C" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="YtP-Em-Jct"/>
                             <constraint firstItem="mZj-le-bob" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="aAD-YW-oUG"/>
                             <constraint firstItem="mZj-le-bob" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="arl-YF-DJz"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="F0G-Ze-p1C" secondAttribute="leading" id="fPs-EP-lUq"/>
                             <constraint firstItem="DRg-xU-Gut" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="fZo-Og-jlu"/>
-                            <constraint firstItem="F0G-Ze-p1C" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="lUc-90-cGW"/>
-                            <constraint firstItem="DRg-xU-Gut" firstAttribute="top" secondItem="mZj-le-bob" secondAttribute="bottom" constant="30" id="r41-OK-L4k"/>
+                            <constraint firstItem="F0G-Ze-p1C" firstAttribute="width" secondItem="DRg-xU-Gut" secondAttribute="width" id="hKC-oF-XJg"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="DRg-xU-Gut" secondAttribute="leading" id="tMb-Cg-tCU"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
